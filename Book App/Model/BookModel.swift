@@ -15,5 +15,6 @@ struct BookModel{
     var company: String
     var type: String
     var quantity: String
-    var image: String
+    var image: Data
+    var create_time: Date
 }

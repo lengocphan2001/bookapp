@@ -14,6 +14,7 @@ class StudentCell: UITableViewCell {
     @IBOutlet weak var txtBookName: UILabel!
     @IBOutlet weak var txtBookQuantity: UILabel!
     @IBOutlet weak var txtBookAuthor: UILabel!
+    @IBOutlet weak var imgBookImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

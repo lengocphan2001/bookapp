@@ -27,8 +27,8 @@ class ModelManager{
     func saveBook(book: BookModel) -> Bool{
         shareInstace.database?.open()
         
-        let isSave = shareInstace.database?.executeUpdate("insert into books (name,author,company,type,quantity,image) values(?, ?, ?, ?, ?, ?)"
-            , withArgumentsIn: [book.name, book.author, book.company, book.type, book.quantity, book.image])
+        let isSave = shareInstace.database?.executeUpdate("insert into books (name,author,company,type,quantity,image,createtime) values(?, ?, ?, ?, ?, ?, ?)"
+            , withArgumentsIn: [book.name, book.author, book.company, book.type, book.quantity, book.image, book.create_time])
         
         shareInstace.database?.close()
         return isSave!
@@ -44,7 +44,7 @@ class ModelManager{
             if resultset != nil {
                 while resultset!.next(){
                     let book = BookModel(id: (resultset!.string(forColumn: "id")!), name: (resultset!.string(forColumn: "name") ?? ""), author: (resultset!.string(forColumn: "author") ?? ""), company: (resultset!.string(forColumn: "company") ?? ""), type: (resultset!.string(forColumn: "type") ??
-                        ""), quantity: (resultset!.string(forColumn: "quantity") ?? ""), image: (resultset!.string(forColumn: "image") ?? ""))
+                        ""), quantity: (resultset!.string(forColumn: "quantity") ?? ""), image: ((resultset!.data(forColumn: "image") ?? nil)!), create_time: ((resultset?.date(forColumn: "createtime"))!))
                     books.append(book)
                 }
             }

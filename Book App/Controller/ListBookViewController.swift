@@ -31,9 +31,10 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblListBook.dequeueReusableCell(withIdentifier: "StudentCell") as! StudentCell
-        cell.txtBookName.text = books[indexPath.row].name
-        cell.txtBookAuthor.text = books[indexPath.row].author
-        cell.txtBookQuantity.text = books[indexPath.row].quantity
+        cell.imgBookImage.image = UIImage(data: books[indexPath.row].image as! Data)
+        cell.txtBookName.text = "Tên sách: \(books[indexPath.row].name)"
+        cell.txtBookAuthor.text = "Tác giả: \(books[indexPath.row].author)"
+        cell.txtBookQuantity.text = "Số lượng: \(books[indexPath.row].quantity)"
     
         return cell
     }
