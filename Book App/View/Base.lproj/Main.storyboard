@@ -205,6 +205,7 @@
                         <viewLayoutGuide key="safeArea" id="x0d-v8-gNi"/>
                     </view>
                     <connections>
+                        <outlet property="btnAdd" destination="cj6-Qo-xeB" id="FiE-pb-eas"/>
                         <outlet property="imgBookImage" destination="7uH-73-OH5" id="qGf-ME-Chk"/>
                         <outlet property="txtBookAuthor" destination="IEw-Jn-bpm" id="dSq-kN-Ulv"/>
                         <outlet property="txtBookCompany" destination="LNU-yU-eDP" id="tD1-vc-S5z"/>
@@ -244,7 +245,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Số lượng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-Ak-ZjP">
-                                                    <rect key="frame" x="101" y="78" width="212" height="21"/>
+                                                    <rect key="frame" x="104" y="78" width="212" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

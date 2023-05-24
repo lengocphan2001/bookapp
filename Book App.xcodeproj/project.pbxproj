@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6263EF0A2A1E96910018DEA0 /* ListBookForBorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */; };
+		6263EF0C2A1E96D50018DEA0 /* BorrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */; };
 		62A131132A1E63BB0040FFEC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A131122A1E63BB0040FFEC /* ModelManager.swift */; };
 		62AE3D332A1E4B3500D146A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */; };
 		62AE3D352A1E4B3500D146A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D342A1E4B3500D146A7 /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		62AE3D832A1E5AF300D146A7 /* ListBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D822A1E5AF300D146A7 /* ListBookViewController.swift */; };
 		62AE3D8C2A1E5D1300D146A7 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D8B2A1E5D1300D146A7 /* StudentCell.swift */; };
 		62E536C02A1E80F100CC05A5 /* BookApp.db in Resources */ = {isa = PBXBuildFile; fileRef = 62E536BF2A1E80F100CC05A5 /* BookApp.db */; };
+		62E536C22A1EAD0900CC05A5 /* BorrowBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E536C12A1EAD0900CC05A5 /* BorrowBookViewController.swift */; };
+		62E536C42A1EAD3000CC05A5 /* BorrowMainBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E536C32A1EAD3000CC05A5 /* BorrowMainBoard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookForBorrowViewController.swift; sourceTree = "<group>"; };
+		6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowTableViewCell.swift; sourceTree = "<group>"; };
 		62A131122A1E63BB0040FFEC /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		62AE3D2F2A1E4B3500D146A7 /* Book App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,8 @@
 		62AE3D822A1E5AF300D146A7 /* ListBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookViewController.swift; sourceTree = "<group>"; };
 		62AE3D8B2A1E5D1300D146A7 /* StudentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
 		62E536BF2A1E80F100CC05A5 /* BookApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = BookApp.db; path = ../../../../Documents/BookApp.db; sourceTree = "<group>"; };
+		62E536C12A1EAD0900CC05A5 /* BorrowBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowBookViewController.swift; sourceTree = "<group>"; };
+		62E536C32A1EAD3000CC05A5 /* BorrowMainBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BorrowMainBoard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 			children = (
 				62AE3D8A2A1E5CF400D146A7 /* Cell */,
 				62AE3D362A1E4B3500D146A7 /* Main.storyboard */,
+				62E536C32A1EAD3000CC05A5 /* BorrowMainBoard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -209,8 +218,10 @@
 		62AE3D7B2A1E572600D146A7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				62E536C12A1EAD0900CC05A5 /* BorrowBookViewController.swift */,
 				62AE3D7E2A1E579F00D146A7 /* AddBookViewController.swift */,
 				62AE3D822A1E5AF300D146A7 /* ListBookViewController.swift */,
+				6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				62AE3D8B2A1E5D1300D146A7 /* StudentCell.swift */,
+				6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -328,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E536C42A1EAD3000CC05A5 /* BorrowMainBoard.storyboard in Resources */,
 				62AE3D3D2A1E4B3600D146A7 /* LaunchScreen.storyboard in Resources */,
 				62AE3D3A2A1E4B3600D146A7 /* Assets.xcassets in Resources */,
 				62E536C02A1E80F100CC05A5 /* BookApp.db in Resources */,
@@ -356,7 +369,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E536C22A1EAD0900CC05A5 /* BorrowBookViewController.swift in Sources */,
 				62AE3D832A1E5AF300D146A7 /* ListBookViewController.swift in Sources */,
+				6263EF0C2A1E96D50018DEA0 /* BorrowTableViewCell.swift in Sources */,
 				62AE3D732A1E504E00D146A7 /* FMResultSet.m in Sources */,
 				62AE3D7F2A1E579F00D146A7 /* AddBookViewController.swift in Sources */,
 				62AE3D8C2A1E5D1300D146A7 /* StudentCell.swift in Sources */,
@@ -365,6 +380,7 @@
 				62AE3D7A2A1E538900D146A7 /* BookModel.swift in Sources */,
 				62AE3D772A1E507F00D146A7 /* Util.swift in Sources */,
 				62A131132A1E63BB0040FFEC /* ModelManager.swift in Sources */,
+				6263EF0A2A1E96910018DEA0 /* ListBookForBorrowViewController.swift in Sources */,
 				62AE3D742A1E504E00D146A7 /* FMDatabaseQueue.m in Sources */,
 				62AE3D332A1E4B3500D146A7 /* AppDelegate.swift in Sources */,
 				62AE3D712A1E504E00D146A7 /* FMDatabase.m in Sources */,

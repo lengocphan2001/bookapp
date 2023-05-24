@@ -34,6 +34,24 @@ class ModelManager{
         return isSave!
     }
     
+    func updateBook(book: BookModel) -> Bool{
+        shareInstace.database?.open()
+        
+        let isUpdate = shareInstace.database?.executeUpdate("update books set name = ?, author = ?, company = ?, type = ?, quantity = ?, image = ? where id = ?", withArgumentsIn: [book.name, book.author, book.company, book.type, book.company, book.image, book.id])
+        shareInstace.database?.close()
+        
+        return isUpdate!
+    }
+    
+    func deleteBook(id: String) -> Bool{
+        shareInstace.database?.open()
+        
+        let isDelete = shareInstace.database?.executeUpdate("delete from books where id = ?", withArgumentsIn: [id])
+        shareInstace.database?.close()
+        
+        return isDelete!
+    }
+    
     func getListBook()->[BookModel]{
         shareInstace.database?.open()
         var books = [BookModel]()

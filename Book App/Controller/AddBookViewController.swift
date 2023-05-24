@@ -15,10 +15,26 @@ class AddBookViewController: UIViewController {
     @IBOutlet weak var txtBookCompany: UITextField!
     @IBOutlet weak var txtBookType: UITextField!
     
+    @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var imgBookImage: UIImageView!
+    
+    var book : BookModel?
+    var header = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if header != "" {
+            self.title = header
+            imgBookImage.image = UIImage(data: book?.image as! Data)
+            txtBookNam.text = book?.name
+            txtBookAuthor.text = book?.author
+            txtBookQuantity.text = book?.quantity
+            txtBookType.text = book?.type
+            txtBookCompany.text = book?.company
+            btnAdd.setTitle("Sửa sách", for: .normal)
+            
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -27,11 +43,20 @@ class AddBookViewController: UIViewController {
     @IBAction func btnAddBookClick(_ sender: Any) {
         let image = imgBookImage.image!.pngData() as NSData?
         
-        let book = BookModel(id: "", name: txtBookNam.text!, author: txtBookAuthor.text!, company: txtBookCompany.text!, type: txtBookType.text!, quantity: txtBookQuantity.text!, image: image! as Data, create_time: Date())
+        if header == ""{
+            let book = BookModel(id: "", name: txtBookNam.text!, author: txtBookAuthor.text!, company: txtBookCompany.text!, type: txtBookType.text!, quantity: txtBookQuantity.text!, image: image! as Data, create_time: Date())
+            
+            let isSave = ModelManager.getInstance().saveBook(book: book)
+            print("Is save: \(isSave)")
+        }else{
+            let bookNew = BookModel(id: (self.book?.id)!, name: txtBookNam.text!, author: txtBookAuthor.text!, company: txtBookCompany.text!, type: txtBookType.text!, quantity: txtBookQuantity.text!, image: image! as Data, create_time: Date())
+            
+            let isUpdate = ModelManager.getInstance().updateBook(book: bookNew)
+            
+            print("is update: \(isUpdate)")
+        }
         
-        let isSave = ModelManager.getInstance().saveBook(book: book)
         
-        print("Is save: \(isSave)")
     }
     @IBAction func btnChooseImageClick(_ sender: Any) {
         let vc = UIImagePickerController()
