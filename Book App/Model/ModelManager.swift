@@ -75,4 +75,27 @@ class ModelManager{
         
         return books
     }
+    
+    func getListBookForBorrow() -> [BookModel]{
+        var books = [BookModel]()
+        shareInstace.database?.open()
+        do{
+            let resultset : FMResultSet? = try shareInstace.database?.executeQuery("select * from books where quantity > 0", values: nil)
+            
+            
+            if resultset != nil {
+                while resultset!.next(){
+                    let book = BookModel(id: (resultset!.string(forColumn: "id")!), name: (resultset!.string(forColumn: "name") ?? ""), author: (resultset!.string(forColumn: "author") ?? ""), company: (resultset!.string(forColumn: "company") ?? ""), type: (resultset!.string(forColumn: "type") ??
+                        ""), quantity: (resultset!.string(forColumn: "quantity") ?? ""), image: ((resultset!.data(forColumn: "image") ?? nil)!), create_time: ((resultset?.date(forColumn: "createtime"))!))
+                    books.append(book)
+                }
+            }
+            
+        }
+        catch let err{
+            print(err.localizedDescription)
+        }
+        shareInstace.database?.close()
+        return books
+    }
 }
