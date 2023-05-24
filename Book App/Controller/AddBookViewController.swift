@@ -24,6 +24,10 @@ class AddBookViewController: UIViewController {
 
     
     @IBAction func btnAddBookClick(_ sender: Any) {
-        let book = BookModel(id: "", name: txtBookNam.text!, author: txtBookAuthor.text!, )
+        let book = BookModel(id: "", name: txtBookNam.text!, author: txtBookAuthor.text!, company: txtBookCompany.text!, type: txtBookType.text!, quantity: txtBookQuantity.text!, image: "")
+        
+        let isSave = ModelManager.getInstance().saveBook(book: book)
+        
+        print("Is save: \(isSave)")
     }
 }

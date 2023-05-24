@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62A131132A1E63BB0040FFEC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A131122A1E63BB0040FFEC /* ModelManager.swift */; };
-		62A131152A1E67780040FFEC /* Book.db in Resources */ = {isa = PBXBuildFile; fileRef = 62A131142A1E67770040FFEC /* Book.db */; };
+		62A131192A1E6F6D0040FFEC /* BookApp.db in Resources */ = {isa = PBXBuildFile; fileRef = 62A131182A1E6F6D0040FFEC /* BookApp.db */; };
 		62AE3D332A1E4B3500D146A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */; };
 		62AE3D352A1E4B3500D146A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D342A1E4B3500D146A7 /* ViewController.swift */; };
 		62AE3D382A1E4B3500D146A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AE3D362A1E4B3500D146A7 /* Main.storyboard */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		62A131122A1E63BB0040FFEC /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
-		62A131142A1E67770040FFEC /* Book.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Book.db; sourceTree = "<group>"; };
+		62A131182A1E6F6D0040FFEC /* BookApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = BookApp.db; sourceTree = "<group>"; };
 		62AE3D2F2A1E4B3500D146A7 /* Book App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62AE3D342A1E4B3500D146A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 		62AE3D782A1E537E00D146A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				62A131142A1E67770040FFEC /* Book.db */,
+				62A131182A1E6F6D0040FFEC /* BookApp.db */,
 				62AE3D792A1E538900D146A7 /* BookModel.swift */,
 				62A131122A1E63BB0040FFEC /* ModelManager.swift */,
 			);
@@ -330,7 +330,7 @@
 			files = (
 				62AE3D3D2A1E4B3600D146A7 /* LaunchScreen.storyboard in Resources */,
 				62AE3D3A2A1E4B3600D146A7 /* Assets.xcassets in Resources */,
-				62A131152A1E67780040FFEC /* Book.db in Resources */,
+				62A131192A1E6F6D0040FFEC /* BookApp.db in Resources */,
 				62AE3D382A1E4B3500D146A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
