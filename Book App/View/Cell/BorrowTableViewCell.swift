@@ -10,11 +10,16 @@ import UIKit
 
 class BorrowTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var txtBookName: UILabel!
+    
     @IBOutlet weak var imgBookImage: UIImageView!
-    @IBOutlet weak var txtBookQuantity: UILabel!
+    @IBOutlet weak var txtBookCompany: UILabel!
     @IBOutlet weak var txtBookAuthor: UILabel!
     @IBOutlet weak var txtBookIdentity: UILabel!
-    @IBOutlet weak var txtBookName: UILabel!
+    
+    @IBOutlet weak var btnBorrow: UIButton!
+    
+    @IBOutlet weak var btnDetail: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,14 +29,6 @@ class BorrowTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     
-    }
-    
-    
-    @IBAction func btnDetailBookClick(_ sender: Any) {
-        
-    }
-    
-    @IBAction func btnBorrowBookClick(_ sender: Any) {
     }
     
 }

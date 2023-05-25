@@ -11,6 +11,7 @@ import UIKit
 class StudentCell: UITableViewCell {
     @IBOutlet weak var btnEdit: UIButton!
     @IBOutlet weak var btnDelete: UIButton!
+    @IBOutlet weak var btnDetail: UIButton!
     @IBOutlet weak var txtBookName: UILabel!
     @IBOutlet weak var txtBookQuantity: UILabel!
     @IBOutlet weak var txtBookAuthor: UILabel!

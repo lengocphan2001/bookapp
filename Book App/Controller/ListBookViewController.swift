@@ -38,8 +38,10 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         cell.txtBookQuantity.text = "Số lượng: \(books[indexPath.row].quantity)"
         cell.btnEdit.tag = indexPath.row
         cell.btnDelete.tag = indexPath.row
+        cell.btnDetail.tag = indexPath.row
         cell.btnEdit.addTarget(self, action: #selector(onClickEdit(_:)), for: .touchUpInside)
         cell.btnDelete.addTarget(self, action: #selector(onClickDelete(_:)), for: .touchUpInside)
+        cell.btnDetail.addTarget(self, action: #selector(onClickDetail(_:)), for: .touchUpInside)
     
         return cell
     }
@@ -54,6 +56,14 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         AddBookViewController
         vc.book = books[sender.tag]
         vc.header = "Cập nhật"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func onClickDetail(_ sender: UIButton){
+        print(sender.tag)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "BookDetailViewController") as!
+        BookDetailViewController
+        vc.book = books[sender.tag]
         navigationController?.pushViewController(vc, animated: true)
     }
     
