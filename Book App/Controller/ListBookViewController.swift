@@ -14,6 +14,8 @@ class ListBookViewController: UIViewController {
     var books = [BookModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        books = ModelManager.getInstance().getListBook()
+        self.tblListBook.reloadData()
 
         // Do any additional setup after loading the view.
     }
@@ -47,7 +49,7 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 130
     }
     
     @objc func onClickEdit(_ sender: UIButton){
@@ -74,9 +76,8 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         
         let deleteAction = UIAlertAction(title: "Xóa", style: .destructive) { _ in
             DispatchQueue.main.async {
-                
-                self.books.remove(at: sender.tag)
                 let isDelete = ModelManager.getInstance().deleteBook(id: self.books[sender.tag].id)
+                self.books.remove(at: sender.tag)
                 self.tblListBook.reloadData()
             }
         }

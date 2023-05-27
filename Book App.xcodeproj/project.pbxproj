@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4117D5502A1FD7620032B5DC /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4117D54F2A1FD7620032B5DC /* BookDetailViewController.swift */; };
-		415F39C92A1FA4DA00CB9B16 /* BookApp.db in Resources */ = {isa = PBXBuildFile; fileRef = 415F39C82A1FA4DA00CB9B16 /* BookApp.db */; };
 		6263EF0A2A1E96910018DEA0 /* ListBookForBorrowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */; };
 		6263EF0C2A1E96D50018DEA0 /* BorrowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */; };
+		628B39542A21E48500982C96 /* BorrowBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B39532A21E48500982C96 /* BorrowBookModel.swift */; };
+		628B395A2A21FCFF00982C96 /* BorrowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B39592A21FCFF00982C96 /* BorrowDetailViewController.swift */; };
+		628B395C2A22027000982C96 /* StatisticalBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B395B2A22027000982C96 /* StatisticalBook.swift */; };
+		628B39602A2211EB00982C96 /* StatisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B395F2A2211EB00982C96 /* StatisTableViewCell.swift */; };
+		628B39622A22126300982C96 /* ListStatisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B39612A22126300982C96 /* ListStatisViewController.swift */; };
+		628B39662A22261800982C96 /* BookApp.db in Resources */ = {isa = PBXBuildFile; fileRef = 628B39652A22261800982C96 /* BookApp.db */; };
+		628B39682A22277900982C96 /* ReturnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B39672A22277900982C96 /* ReturnTableViewCell.swift */; };
+		628B396A2A2227C200982C96 /* ListReturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B39692A2227C200982C96 /* ListReturnViewController.swift */; };
 		62A131132A1E63BB0040FFEC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A131122A1E63BB0040FFEC /* ModelManager.swift */; };
 		62AE3D332A1E4B3500D146A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */; };
 		62AE3D352A1E4B3500D146A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AE3D342A1E4B3500D146A7 /* ViewController.swift */; };
@@ -51,9 +58,16 @@
 
 /* Begin PBXFileReference section */
 		4117D54F2A1FD7620032B5DC /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
-		415F39C82A1FA4DA00CB9B16 /* BookApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = BookApp.db; path = ../../../BookApp.db; sourceTree = "<group>"; };
 		6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBookForBorrowViewController.swift; sourceTree = "<group>"; };
 		6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowTableViewCell.swift; sourceTree = "<group>"; };
+		628B39532A21E48500982C96 /* BorrowBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowBookModel.swift; sourceTree = "<group>"; };
+		628B39592A21FCFF00982C96 /* BorrowDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowDetailViewController.swift; sourceTree = "<group>"; };
+		628B395B2A22027000982C96 /* StatisticalBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticalBook.swift; sourceTree = "<group>"; };
+		628B395F2A2211EB00982C96 /* StatisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisTableViewCell.swift; sourceTree = "<group>"; };
+		628B39612A22126300982C96 /* ListStatisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStatisViewController.swift; sourceTree = "<group>"; };
+		628B39652A22261800982C96 /* BookApp.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = BookApp.db; path = ../../../../Documents/BookApp.db; sourceTree = "<group>"; };
+		628B39672A22277900982C96 /* ReturnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnTableViewCell.swift; sourceTree = "<group>"; };
+		628B39692A2227C200982C96 /* ListReturnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReturnViewController.swift; sourceTree = "<group>"; };
 		62A131122A1E63BB0040FFEC /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		62AE3D2F2A1E4B3500D146A7 /* Book App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AE3D322A1E4B3500D146A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -206,9 +220,11 @@
 		62AE3D782A1E537E00D146A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				415F39C82A1FA4DA00CB9B16 /* BookApp.db */,
+				628B39652A22261800982C96 /* BookApp.db */,
 				62AE3D792A1E538900D146A7 /* BookModel.swift */,
 				62A131122A1E63BB0040FFEC /* ModelManager.swift */,
+				628B39532A21E48500982C96 /* BorrowBookModel.swift */,
+				628B395B2A22027000982C96 /* StatisticalBook.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +238,9 @@
 				62AE3D822A1E5AF300D146A7 /* ListBookViewController.swift */,
 				6263EF092A1E96910018DEA0 /* ListBookForBorrowViewController.swift */,
 				4117D54F2A1FD7620032B5DC /* BookDetailViewController.swift */,
+				628B39592A21FCFF00982C96 /* BorrowDetailViewController.swift */,
+				628B39612A22126300982C96 /* ListStatisViewController.swift */,
+				628B39692A2227C200982C96 /* ListReturnViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -231,6 +250,8 @@
 			children = (
 				62AE3D8B2A1E5D1300D146A7 /* StudentCell.swift */,
 				6263EF0B2A1E96D50018DEA0 /* BorrowTableViewCell.swift */,
+				628B395F2A2211EB00982C96 /* StatisTableViewCell.swift */,
+				628B39672A22277900982C96 /* ReturnTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -342,7 +363,7 @@
 			files = (
 				62AE3D3D2A1E4B3600D146A7 /* LaunchScreen.storyboard in Resources */,
 				62AE3D3A2A1E4B3600D146A7 /* Assets.xcassets in Resources */,
-				415F39C92A1FA4DA00CB9B16 /* BookApp.db in Resources */,
+				628B39662A22261800982C96 /* BookApp.db in Resources */,
 				62AE3D382A1E4B3500D146A7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,20 +389,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628B39682A22277900982C96 /* ReturnTableViewCell.swift in Sources */,
 				62E536C22A1EAD0900CC05A5 /* BorrowBookViewController.swift in Sources */,
 				62AE3D832A1E5AF300D146A7 /* ListBookViewController.swift in Sources */,
 				4117D5502A1FD7620032B5DC /* BookDetailViewController.swift in Sources */,
+				628B396A2A2227C200982C96 /* ListReturnViewController.swift in Sources */,
 				6263EF0C2A1E96D50018DEA0 /* BorrowTableViewCell.swift in Sources */,
 				62AE3D732A1E504E00D146A7 /* FMResultSet.m in Sources */,
+				628B395A2A21FCFF00982C96 /* BorrowDetailViewController.swift in Sources */,
 				62AE3D7F2A1E579F00D146A7 /* AddBookViewController.swift in Sources */,
 				62AE3D8C2A1E5D1300D146A7 /* StudentCell.swift in Sources */,
+				628B39542A21E48500982C96 /* BorrowBookModel.swift in Sources */,
 				62AE3D352A1E4B3500D146A7 /* ViewController.swift in Sources */,
 				62AE3D702A1E504E00D146A7 /* FMDatabasePool.m in Sources */,
 				62AE3D7A2A1E538900D146A7 /* BookModel.swift in Sources */,
+				628B39602A2211EB00982C96 /* StatisTableViewCell.swift in Sources */,
 				62AE3D772A1E507F00D146A7 /* Util.swift in Sources */,
+				628B39622A22126300982C96 /* ListStatisViewController.swift in Sources */,
 				62A131132A1E63BB0040FFEC /* ModelManager.swift in Sources */,
 				6263EF0A2A1E96910018DEA0 /* ListBookForBorrowViewController.swift in Sources */,
 				62AE3D742A1E504E00D146A7 /* FMDatabaseQueue.m in Sources */,
+				628B395C2A22027000982C96 /* StatisticalBook.swift in Sources */,
 				62AE3D332A1E4B3500D146A7 /* AppDelegate.swift in Sources */,
 				62AE3D712A1E504E00D146A7 /* FMDatabase.m in Sources */,
 				62AE3D6F2A1E504E00D146A7 /* FMDatabaseAdditions.m in Sources */,

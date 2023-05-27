@@ -10,35 +10,43 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
     
+    var bookName : String = ""
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnBorrowClick: UIButton!
     @IBOutlet weak var imgBookImage: UIImageView!
-    @IBOutlet weak var txtBookCompany: UILabel!
-    @IBOutlet weak var txtBookQuantity: UILabel!
-    @IBOutlet weak var txtBookType: UILabel!
-    @IBOutlet weak var txtBookAuthor: UILabel!
-    @IBOutlet weak var txtBookName: UILabel!
-    @IBOutlet weak var txtBookIdentity: UILabel!
+    @IBOutlet weak var txtBookCompany: UITextField!
+    @IBOutlet weak var txtBookQuantity: UITextField!
+    @IBOutlet weak var txtBookType: UITextField!
+    @IBOutlet weak var txtBookAuthor: UITextField!
+    @IBOutlet weak var txtBookName: UITextField!
+    @IBOutlet weak var txtBookIdentity: UITextField!
     
     var book : BookModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.imgBookImage.image = UIImage(data: book?.image as! Data)
-        self.txtBookIdentity.text = "Mã sách: \(String(describing: book?.id ?? nil))"
-//        self.txtBookName.text = book?.name
-//        self.txtBookAuthor.text = book?.author
-//        self.txtBookCompany.text = book?.company
-//        self.txtBookQuantity.text = book?.quantity
-//        self.txtBookType.text = book?.type
-        btnBorrowClick.setTitle(book?.name, for: .normal)
+        imgBookImage.image = UIImage(data: book?.image as! Data)
+        txtBookName.text = book?.name
+        txtBookAuthor.text = book?.author
+        txtBookCompany.text = book?.company
+        txtBookQuantity.text = book?.quantity
+        txtBookType.text = book?.type
+        txtBookIdentity.text = book?.id
+        
+
+        
     }
-    
-    @IBAction func btnBackClick(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "gotoborrow" {
+            let bookborrowVC = segue.destination as! BorrowBookViewController
+            bookborrowVC.bookIdentity = (txtBookIdentity?.text)!
+            bookborrowVC.bookName = (txtBookName?.text)!
+            bookborrowVC.image = imgBookImage.image!.pngData()
+        }
     }
-    
-    @IBAction func btnBorrow(_ sender: Any) {
+    @IBAction func btnBorrowClick(_ sender: Any) {
+        performSegue(withIdentifier: "gotoborrow", sender: self)
     }
 }
 
