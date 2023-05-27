@@ -9,12 +9,13 @@
 import UIKit
 
 class ListBookViewController: UIViewController {
-
     @IBOutlet weak var tblListBook: UITableView!
     var books = [BookModel]()
+    var bookArray = [BookModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
         books = ModelManager.getInstance().getListBook()
+        bookArray = books
         self.tblListBook.reloadData()
 
         // Do any additional setup after loading the view.
@@ -29,15 +30,15 @@ class ListBookViewController: UIViewController {
 }
 extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+        return bookArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblListBook.dequeueReusableCell(withIdentifier: "StudentCell") as! StudentCell
-        cell.imgBookImage.image = UIImage(data: books[indexPath.row].image as! Data)
-        cell.txtBookName.text = "Tên sách: \(books[indexPath.row].name)"
-        cell.txtBookAuthor.text = "Tác giả: \(books[indexPath.row].author)"
-        cell.txtBookQuantity.text = "Số lượng: \(books[indexPath.row].quantity)"
+        cell.imgBookImage.image = UIImage(data: bookArray[indexPath.row].image as! Data)
+        cell.txtBookName.text = "Tên sách: \(bookArray[indexPath.row].name)"
+        cell.txtBookAuthor.text = "Tác giả: \(bookArray[indexPath.row].author)"
+        cell.txtBookQuantity.text = "Số lượng: \(bookArray[indexPath.row].quantity)"
         cell.btnEdit.tag = indexPath.row
         cell.btnDelete.tag = indexPath.row
         cell.btnDetail.tag = indexPath.row
@@ -56,7 +57,7 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         print(sender.tag)
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddBookViewController") as!
         AddBookViewController
-        vc.book = books[sender.tag]
+        vc.book = bookArray[sender.tag]
         vc.header = "Cập nhật"
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -65,7 +66,7 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         print(sender.tag)
         let vc = storyboard?.instantiateViewController(withIdentifier: "BookDetailViewController") as!
         BookDetailViewController
-        vc.book = books[sender.tag]
+        vc.book = bookArray[sender.tag]
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -76,8 +77,8 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         
         let deleteAction = UIAlertAction(title: "Xóa", style: .destructive) { _ in
             DispatchQueue.main.async {
-                let isDelete = ModelManager.getInstance().deleteBook(id: self.books[sender.tag].id)
-                self.books.remove(at: sender.tag)
+                let isDelete = ModelManager.getInstance().deleteBook(id: self.bookArray[sender.tag].id)
+                self.bookArray.remove(at: sender.tag)
                 self.tblListBook.reloadData()
             }
         }
@@ -89,6 +90,6 @@ extension ListBookViewController: UITableViewDelegate, UITableViewDataSource{
         //Present the alert controller
         present(alert, animated: true, completion: nil)
     }
-    
+
 }
 
